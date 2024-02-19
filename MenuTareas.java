@@ -13,12 +13,14 @@ public class MenuTareas {
         int opcion;
         ManejarTareas nt = new ManejarTareas();
         do {
-            System.out.println("\n-- Menú de Tareas --");
+            System.out.println("---------------------------------");
+            System.out.println("-- Menú de Tareas --");
             System.out.println("1. Agregar nueva tarea");
             System.out.println("2. Marcar tarea como completada");
             System.out.println("3. Eliminar tarea de la lista");
             System.out.println("4. Generar reporte de tareas");
             System.out.println("5. Salir");
+            System.out.println("---------------------------------");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
 
