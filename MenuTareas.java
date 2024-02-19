@@ -24,7 +24,7 @@ public class MenuTareas {
 
             switch (opcion) {
                 case 1:
-
+                    nt.agregarTarea(listaTareas);
                     break;
                 case 2:
                     nt.marcarTareaCompletada(listaTareas);

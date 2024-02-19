@@ -4,8 +4,12 @@ import java.util.Scanner;
 public class ManejarTareas {
     public Scanner scanner = new Scanner(System.in);
     public void agregarTarea(ArrayList<Tarea> listaTareas) {
-
+        System.out.print("Ingrese el nombre de la nueva tarea: ");
+        String nombreTarea = scanner.next();
+        listaTareas.add(new Tarea(nombreTarea));
+        System.out.println("TAREA AGREGADA CORRECTAMENTE.");
     }
+
 
     public void marcarTareaCompletada(ArrayList<Tarea> listaTareas) {
         System.out.println("LISTA DE TAREAS");
