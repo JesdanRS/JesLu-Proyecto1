@@ -3,13 +3,15 @@ import java.util.Scanner;
 
 public class MenuTareas {
     private Scanner scanner;
-
+    private ArrayList<Tarea> listaTareas;
     public MenuTareas() {
+        listaTareas = new ArrayList<>();
         scanner = new Scanner(System.in);
     }
 
     public void mostrarMenu() {
         int opcion;
+        ManejarTareas nt = new ManejarTareas();
         do {
             System.out.println("\n-- Menú de Tareas --");
             System.out.println("1. Agregar nueva tarea");
@@ -22,7 +24,7 @@ public class MenuTareas {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Aquí va agregar tareas");
+
                     break;
                 case 2:
                     System.out.println("Aquí va marcar como completado");
