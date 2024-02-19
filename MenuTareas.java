@@ -30,7 +30,7 @@ public class MenuTareas {
                     nt.marcarTareaCompletada(listaTareas);
                     break;
                 case 3:
-                    System.out.println("Aquí va eliminar tarea");
+                    nt.eliminarTarea(listaTareas);
                     break;
                 case 4:
                     nt.generarReporte(listaTareas);

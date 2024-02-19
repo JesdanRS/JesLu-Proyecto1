@@ -32,7 +32,21 @@ public class ManejarTareas {
     }
 
     public void eliminarTarea(ArrayList<Tarea> listaTareas) {
-
+        System.out.println("LISTA DE TAREAS");
+        int c = 1;
+        for (Tarea tarea : listaTareas) {
+            System.out.println(c + "\t" + tarea);
+            c++;
+        }
+        System.out.print("Ingrese el índice de la tarea a eliminar: ");
+        int indice = scanner.nextInt();
+        int i = indice - 1;
+        if (i >= 0 && i < listaTareas.size()) {
+            listaTareas.remove(indice-1);
+            System.out.println("TAREA ELIMINADA CON ÉXITO.");
+        } else {
+            System.out.println("ÍNDICE DE TAREA NO VÁLIDO.");
+        }
     }
 
     public void generarReporte(ArrayList<Tarea> listaTareas) {
