@@ -8,7 +8,7 @@ public class ManejarTareas {
     }
 
     public void marcarTareaCompletada(ArrayList<Tarea> listaTareas) {
-
+        //Añadir código
     }
 
     public void eliminarTarea(ArrayList<Tarea> listaTareas) {
