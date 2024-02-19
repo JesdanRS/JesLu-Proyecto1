@@ -8,7 +8,23 @@ public class ManejarTareas {
     }
 
     public void marcarTareaCompletada(ArrayList<Tarea> listaTareas) {
-        //Añadir código
+        System.out.println("LISTA DE TAREAS");
+        int c = 1;
+        for (Tarea tarea : listaTareas) {
+            if (!tarea.isCompletada()){
+                System.out.println(c + "\t" + tarea);
+                c++;
+            }
+        }
+        System.out.print("Ingrese el índice de la tarea a marcar como completada: ");
+        int indice = scanner.nextInt();
+        int i = indice - 1;
+        if (i >= 0 && i < listaTareas.size()) {
+            listaTareas.get(i).marcarComoCompletada();
+            System.out.println("TAREA MARCADA COMO COMPLETADA.");
+        } else {
+            System.out.println("ÍNDICE NO VÁLIDO.");
+        }
     }
 
     public void eliminarTarea(ArrayList<Tarea> listaTareas) {
