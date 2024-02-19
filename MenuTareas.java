@@ -27,7 +27,7 @@ public class MenuTareas {
 
                     break;
                 case 2:
-                    System.out.println("Aquí va marcar como completado");
+                    nt.marcarTareaCompletada(listaTareas);
                     break;
                 case 3:
                     System.out.println("Aquí va eliminar tarea");
