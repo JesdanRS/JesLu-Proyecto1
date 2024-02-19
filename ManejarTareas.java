@@ -36,6 +36,18 @@ public class ManejarTareas {
     }
 
     public void generarReporte(ArrayList<Tarea> listaTareas) {
-
+        System.out.println("-- REPORTE DE TAREAS --");
+        System.out.println("EN CURSO:");
+        for (Tarea tarea : listaTareas) {
+            if (!tarea.isCompletada()) {
+                System.out.println(tarea);
+            }
+        }
+        System.out.println("COMPLETADAS:");
+        for (Tarea tarea : listaTareas) {
+            if (tarea.isCompletada()) {
+                System.out.println(tarea);
+            }
+        }
     }
 }

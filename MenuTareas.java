@@ -33,7 +33,7 @@ public class MenuTareas {
                     System.out.println("Aquí va eliminar tarea");
                     break;
                 case 4:
-                    System.out.println("Aquí va generar reportes de tareas");
+                    nt.generarReporte(listaTareas);
                     break;
                 case 5:
                     System.out.println("Saliendo del programa...");
