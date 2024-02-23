@@ -1,4 +1,7 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class ManejarTareas {
@@ -6,7 +9,22 @@ public class ManejarTareas {
     public void agregarTarea(ArrayList<Tarea> listaTareas) {
         System.out.print("Ingrese el nombre de la nueva tarea: ");
         String nombreTarea = scanner.next();
-        listaTareas.add(new Tarea(nombreTarea));
+        Tarea nuevaTarea = new Tarea(nombreTarea);
+        System.out.print("Ingrese la fecha límite (Formato: dd/MM/yyyy): ");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date fechaLimite = null;
+        boolean fechaValida = false;
+        do {
+            String fechaString = scanner.next();
+            try {
+                fechaLimite = dateFormat.parse(fechaString);
+                fechaValida = true;
+            } catch (ParseException e) {
+                System.out.println("FORMATO DE FECHA INVÁLIDO.\nInténtelo de nuevo (Formato: dd/MM/yyyy): ");
+            }
+        } while (!fechaValida);
+        nuevaTarea.setFechaLimite(fechaLimite);
+        listaTareas.add(nuevaTarea);
         System.out.println("TAREA AGREGADA CORRECTAMENTE.");
     }
 
