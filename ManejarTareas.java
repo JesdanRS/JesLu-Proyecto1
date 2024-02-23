@@ -8,7 +8,7 @@ public class ManejarTareas {
     public Scanner scanner = new Scanner(System.in);
     public void agregarTarea(ArrayList<Tarea> listaTareas) {
         System.out.print("Ingrese el nombre de la nueva tarea: ");
-        String nombreTarea = scanner.next();
+        String nombreTarea = scanner.nextLine();
         Tarea nuevaTarea = new Tarea(nombreTarea);
         System.out.print("Ingrese la fecha límite (Formato: dd/MM/yyyy): ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -20,7 +20,8 @@ public class ManejarTareas {
                 fechaLimite = dateFormat.parse(fechaString);
                 fechaValida = true;
             } catch (ParseException e) {
-                System.out.println("FORMATO DE FECHA INVÁLIDO.\nInténtelo de nuevo (Formato: dd/MM/yyyy): ");
+                System.out.println("FORMATO DE FECHA INVÁLIDO.");
+                System.out.println("Inténtelo de nuevo (Formato: dd/MM/yyyy): ");
             }
         } while (!fechaValida);
         nuevaTarea.setFechaLimite(fechaLimite);
